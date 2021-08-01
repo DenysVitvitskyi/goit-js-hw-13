@@ -107,13 +107,13 @@ async function laodMoreImages(e) {
 //     window.addEventListener('scroll', findEdgeOfPageTrottled);
 //   }
 
- // window.scrollBy({
-    //   top:
-    //     buttonMoreTop -
-    //     40 -
-    //     Number.parseInt(getComputedStyle(refs.searchWrapper).height),
-    //   behavior: 'smooth',
-    // });
+//  window.scrollBy({
+//       top:
+//         buttonMoreTop -
+//         40 -
+//         Number.parseInt(getComputedStyle(refs.searchWrapper).height),
+//       behavior: 'smooth',
+//     });
 
 // const findEdgeOfPageTrottled = throttle(() => {
 //   const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
