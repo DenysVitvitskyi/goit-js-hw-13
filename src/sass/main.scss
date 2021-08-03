@@ -6,7 +6,6 @@
 }
 
 body {
-  font-family: Roboto, sans-serif;
   padding-bottom: 30px;
 }
 
@@ -29,7 +28,7 @@ img {
   justify-content: center;
   align-items: center;
 
-  background-color: #4056b4;
+  background-color: aqua;
   box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4);
 }
 
@@ -41,7 +40,7 @@ img {
   overflow: hidden;
 
   &:focus-within {
-    box-shadow: 0 0 0 2px #6090e2;
+    box-shadow: 0 0 0 2px blue;
   }
 
   input {
@@ -69,16 +68,6 @@ img {
 
   margin-bottom: 10px;
   padding: 20px;
-
-  @media screen and (max-width: 1500px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  @media screen and (max-width: 1000px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media screen and (max-width: 620px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
 }
 
 .photo-card {
@@ -92,10 +81,6 @@ img {
   grid-template-columns: repeat(4, auto);
   gap: 10px;
   padding: 10px 20px;
-
-  @media screen and (max-width: 750px) {
-    font-size: 13px;
-  }
 }
 
 .info-item {

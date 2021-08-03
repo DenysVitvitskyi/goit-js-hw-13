@@ -1,7 +1,6 @@
-// import '@fortawesome/fontawesome-free/js/solid';
-// import '@fortawesome/fontawesome-free/js/fontawesome';
 import { Notify } from 'notiflix';
 import throttle from 'lodash.throttle';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.css';
 import 'modern-normalize/modern-normalize.css';
@@ -80,7 +79,8 @@ async function searchImages(e) {
   }
   if (numberOfPages > 1) {
     refs.buttonLoadMore.style.display = 'block';
-  }
+  } 
+
 }
 
 async function laodMoreImages(e) {
@@ -89,6 +89,7 @@ async function laodMoreImages(e) {
   currentPage += 1;
   if (!query) {
     return;
+
   }
   try {
     const images = await fetchImages({ query, page, imagesPerPage });
@@ -99,26 +100,3 @@ async function laodMoreImages(e) {
     console.log('Error', error.message);
   }
 }
-
-// const buttonMoreTop = refs.buttonLoadMore.getBoundingClientRect().top;
-
-//   if (currentPage === numberOfPages) {
-//     refs.buttonLoadMore.style.display = 'none';
-//     window.addEventListener('scroll', findEdgeOfPageTrottled);
-//   }
-
-//  window.scrollBy({
-//       top:
-//         buttonMoreTop -
-//         40 -
-//         Number.parseInt(getComputedStyle(refs.searchWrapper).height),
-//       behavior: 'smooth',
-//     });
-
-// const findEdgeOfPageTrottled = throttle(() => {
-//   const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
-//   if (scrollTop + clientHeight > scrollHeight - 20) {
-//     Notify.info("We're sorry, but you've reached the end of search results.");
-//     window.removeEventListener('scroll', findEdgeOfPageTrottled);
-//   }
-// }, 300);
